@@ -21,6 +21,8 @@ h4, h5, h6 {
 p {
   font-family: "EB Garamond", serif;
   font-size: 16px;
+  margin: 64px;
+  text-align: center;
 }
 
 .circle {
@@ -33,12 +35,22 @@ p {
   border-radius: 50%;
   list-style: none;
   overflow: hidden;
+  z-index: 0;
 }
 .hole {
+  -webkit-clip-path: inset(0px);
   position: absolute;
-  border: 3px solid black;
-  margin: auto;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 40em;
+  height: 40em;
+  left: 11.7em;
+  top: 9.5em;
+  
+  overflow: hidden;
+  padding: 0;
   background: white;
+  z-index: 1;
 }
 li {
   overflow: hidden;
@@ -130,4 +142,10 @@ li:nth-child(11) .text {
 }
 li:nth-child(12) .text {
   background: #ff0080;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
