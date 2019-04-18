@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.integer('month')
     table.string('famous Comedy')
     table.integer('url')
+    
   })
 };
 
