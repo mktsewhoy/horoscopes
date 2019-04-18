@@ -1,0 +1,161 @@
+body {
+  background-color: #202020;
+  background-image: url("/images/1280px-BigdipISS.jpg");
+}
+h1 {
+  color: #ffffff;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 20px 0px -50px 0px;
+  text-align: center;
+}
+h2 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 20px 0px -50px 0px;
+  text-align: center;
+}
+h3{
+  font-family: "Cinzel Decorative", serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 64px 0px 0px 0px;
+  text-align: center;
+}
+h4, h5, h6 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 24px;
+  text-align: center;
+}
+p {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  margin: 64px;
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  border: 4px solid white;
+  padding: 0;
+  margin: 1em auto;
+  width: 47em;
+  height: 47em;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.hole {
+  -webkit-clip-path: inset(0px);
+  position: relative;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin:1em auto;
+  width: 35em;
+  height: 35em;
+  top: -42em;
+  overflow: hidden;
+  padding: 0;
+  background: white;
+  z-index: 1;
+}
+li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+.text {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(60deg) rotate(15deg);
+  padding-top: 20px;
+  font-size: 32px;
+}
+li:first-child {
+  transform: rotate(0deg) skewY(-60deg);
+}
+li:nth-child(2) {
+  transform: rotate(30deg) skewY(-60deg);
+}
+li:nth-child(3) {
+  transform: rotate(60deg) skewY(-60deg);
+}
+li:nth-child(4) {
+  transform: rotate(90deg) skewY(-60deg);
+}
+li:nth-child(5) {
+  transform: rotate(120deg) skewY(-60deg);
+}
+li:nth-child(6) {
+  transform: rotate(150deg) skewY(-60deg);
+}
+li:nth-child(7) {
+  transform: rotate(180deg) skewY(-60deg);
+}
+li:nth-child(8) {
+  transform: rotate(210deg) skewY(-60deg);
+}
+li:nth-child(9) {
+  transform: rotate(240deg) skewY(-60deg);
+}
+li:nth-child(10) {
+  transform: rotate(270deg) skewY(-60deg);
+}
+li:nth-child(11) {
+  transform: rotate(300deg) skewY(-60deg);
+}
+li:nth-child(12) {
+  transform: rotate(330deg) skewY(-60deg);
+}
+li:first-child .text {
+  background: red;
+}
+li:nth-child(2) .text {
+  background: orange;
+}
+li:nth-child(3) .text {
+  background: yellow;
+}
+li:nth-child(4) .text {
+  background: #80ff00;
+}
+li:nth-child(5) .text {
+  background: green;
+}
+li:nth-child(6) .text {
+  background: #00ff80;
+}
+li:nth-child(7) .text {
+  background: cyan;
+}
+li:nth-child(8) .text {
+  background: #0080ff;
+}
+li:nth-child(9) .text {
+  background: blue;
+}
+li:nth-child(10) .text {
+  background: purple;
+}
+li:nth-child(11) .text {
+  background: magenta;
+}
+li:nth-child(12) .text {
+  background: #ff0080;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
