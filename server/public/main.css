@@ -1,4 +1,5 @@
 body {
+  background-color: #202020;
   background-image: url("/images/1280px-BigdipISS.jpg");
 }
 h1 {
@@ -37,7 +38,7 @@ p {
 
 .circle {
   position: relative;
-  border: 4px solid black;
+  border: 4px solid white;
   padding: 0;
   margin: 1em auto;
   width: 47em;
@@ -78,7 +79,7 @@ li {
   text-align: center;
   transform: skewY(60deg) rotate(15deg);
   padding-top: 20px;
-  font-size: 28px;
+  font-size: 32px;
 }
 li:first-child {
   transform: rotate(0deg) skewY(-60deg);
