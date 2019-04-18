@@ -1,20 +1,133 @@
 h1 {
   font-family: "Cinzel Decorative", serif;
   font-size: 48px;
+  text-align: center;
 }
 h2 {
   font-family: "Cinzel Decorative", serif;
   font-size: 40px;
+  text-align: center;
 }
 h3{
   font-family: "Cinzel Decorative", serif;
   font-size: 32px;
+  text-align: center;
 }
 h4, h5, h6 {
   font-family: "Cinzel Decorative", serif;
   font-size: 24px;
+  text-align: center;
 }
 p {
   font-family: "EB Garamond", serif;
   font-size: 16px;
+}
+
+.circle {
+  position: relative;
+  border: 5px solid black;
+  padding: 0;
+  margin: 1em auto;
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+}
+.hole {
+  position: absolute;
+  border: 3px solid black;
+  margin: auto;
+  background: white;
+}
+li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+.text {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(60deg) rotate(15deg);
+  padding-top: 20px;
+  font-size: 28px;
+}
+li:first-child {
+  transform: rotate(0deg) skewY(-60deg);
+}
+li:nth-child(2) {
+  transform: rotate(30deg) skewY(-60deg);
+}
+li:nth-child(3) {
+  transform: rotate(60deg) skewY(-60deg);
+}
+li:nth-child(4) {
+  transform: rotate(90deg) skewY(-60deg);
+}
+li:nth-child(5) {
+  transform: rotate(120deg) skewY(-60deg);
+}
+li:nth-child(6) {
+  transform: rotate(150deg) skewY(-60deg);
+}
+li:nth-child(7) {
+  transform: rotate(180deg) skewY(-60deg);
+}
+li:nth-child(8) {
+  transform: rotate(210deg) skewY(-60deg);
+}
+li:nth-child(9) {
+  transform: rotate(240deg) skewY(-60deg);
+}
+li:nth-child(10) {
+  transform: rotate(270deg) skewY(-60deg);
+}
+li:nth-child(11) {
+  transform: rotate(300deg) skewY(-60deg);
+}
+li:nth-child(12) {
+  transform: rotate(330deg) skewY(-60deg);
+}
+li:first-child .text {
+  background: red;
+}
+li:nth-child(2) .text {
+  background: orange;
+}
+li:nth-child(3) .text {
+  background: yellow;
+}
+li:nth-child(4) .text {
+  background: #80ff00;
+}
+li:nth-child(5) .text {
+  background: green;
+}
+li:nth-child(6) .text {
+  background: #00ff80;
+}
+li:nth-child(7) .text {
+  background: cyan;
+}
+li:nth-child(8) .text {
+  background: #0080ff;
+}
+li:nth-child(9) .text {
+  background: blue;
+}
+li:nth-child(10) .text {
+  background: purple;
+}
+li:nth-child(11) .text {
+  background: magenta;
+}
+li:nth-child(12) .text {
+  background: #ff0080;
 }
