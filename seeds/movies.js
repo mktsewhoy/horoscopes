@@ -1,10 +1,10 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('movies').del()
+  return knex('horoscopes1').del()
     .then(function () {
       // Inserts seed entries
-      return knex('movies').insert([
+      return knex('horoscopes1').insert([
         {id: 1, Movie: 'Argo-Aquarius.jpg',pictures:'Tommy Pickles-Aquarius.png',zodiac:'Aquarius'},
         {id: 2, Movie: 'EatPrayLove-Pisces.jpg',pictures:'Tito Makani-Piscies.png',zodiac:'Pisces'},
         {id: 3, Movie: 'TheMatrix-Aries.png',pictures:'Ash Ketchum-Aries.png',zodiac:'Aries'},
