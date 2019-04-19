@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('')
     table.date('birthday')
+  })
 };
 
 exports.down = function(knex, Promise) {
