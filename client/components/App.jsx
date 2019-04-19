@@ -7,77 +7,82 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      horoscopes: []
+      horoscopes: [],
+      horoscopeText: ''
     }
 
     this.renderHoroscopeInfo = this.renderHoroscopeInfo.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+
   }
 
   componentWillMount() {
-    console.log('componentWillMount')
     getHoroscopeInfo(this.renderHoroscopeInfo)
     console.log("Info returned from getHoroscopeInfo: ", getHoroscopeInfo(this.renderHoroscopeInfo)
     )
   }
 
   componentDidMount() {
-    console.log('componentDidMount')
   }
 
-  renderHoroscopeInfo(err, horoscopes) {
-    console.log('rendering horoscope info')
+  renderHoroscopeInfo(err, horoscopes, horoscopeText) {
     this.setState({
-      horoscopes: horoscopes.dailyhoroscope
+      horoscopes: horoscopes.dailyhoroscope,
+      horoscopeText: horoscopeText
     })
   }
 
+  handleClick(e) {
+    let horoscopeName = e.target.id
+    getHoroscopeInfo(this.renderHoroscopeInfo, horoscopeName)
+  }
+
   render() {
-    console.log('render')
-    console.log(this.state.horoscopes)
+    console.log('rendering')
     return (
       <div>
         <h1>App is rendering!</h1>
-        <p>Horoscopes: {this.state.horoscopes.Leo}</p>
+        <p>Horoscopes: {this.state.horoscopeText}</p>
         <div>
           <h1>Your Horoscope<br /><br /></h1>
-            <ul className="circle">
-              <li>
-                <div className="text"><a href="#">&#9800;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9801;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9802;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9803;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9804;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9805;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9806;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9807;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9808;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9809;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9810;</a></div>
-              </li>
-              <li>
-                <div className="text"><a href="#">&#9811;</a></div>
-              </li>
-            </ul>
+          <ul className="circle">
+            <li>
+              <div className="text" onClick={this.handleClick} id="Aries">&#9800;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Taurus">&#9801;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Gemini">&#9802;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Cancer">&#9803;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Leo">&#9804;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Virgo">&#9805;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Libra">&#9806;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Scorpio">&#9807;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Sagittarius">&#9807;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Capricorn">&#9809;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Aquarius">&#9810;</div>
+            </li>
+            <li>
+              <div className="text" onClick={this.handleClick} id="Pisces">&#9811;</div>
+            </li>
+          </ul>
           <div className="hole">
             <h3>sagittarius</h3>
             <h2>&#9808;</h2>
