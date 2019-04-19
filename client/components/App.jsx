@@ -2,13 +2,17 @@ import React from 'react'
 
 import { getHoroscopeInfo } from '../api'
 
+import { getHoroscopeDbInfo } from '../../server/db/db'
+
 class App extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       horoscopes: [],
-      horoscopeText: ''
+      horoscopeText: '',
+      horoscopeName: '',
+      celebName: ''
     }
 
     this.renderHoroscopeInfo = this.renderHoroscopeInfo.bind(this)
@@ -25,10 +29,13 @@ class App extends React.Component {
   componentDidMount() {
   }
 
-  renderHoroscopeInfo(err, horoscopes, horoscopeText) {
+  renderHoroscopeInfo(err, horoscopes, horoscopeText, horoscopeName) {
+    console.log("horoscope name: ", horoscopeName)
     this.setState({
       horoscopes: horoscopes.dailyhoroscope,
-      horoscopeText: horoscopeText
+      horoscopeText: horoscopeText.split('<')[0],
+      horoscopeName: horoscopeName,
+      // celebName: getHoroscopeDbInfo(horoscopeName)
     })
   }
 
@@ -41,8 +48,6 @@ class App extends React.Component {
     console.log('rendering')
     return (
       <div>
-        <h1>App is rendering!</h1>
-        <p>Horoscopes: {this.state.horoscopeText}</p>
         <div>
           <h1>Your Horoscope<br /><br /></h1>
           <ul className="circle">
@@ -84,10 +89,12 @@ class App extends React.Component {
             </li>
           </ul>
           <div className="hole">
-            <h3>sagittarius</h3>
+            <h3>{this.state.horoscopeName}</h3>
             <h2>&#9808;</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>{this.state.horoscopeName}</p>
+            <p>{this.state.horoscopeText}</p>
           </div>
+          <h3>You share your star-sign with </h3>
         </div>
       </div>
       // <div>

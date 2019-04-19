@@ -9,6 +9,6 @@ export function getHoroscopeInfo(callback, horoscopeName) {
     .end((err, res) => {
       let horoscopeText = res.body.dailyhoroscope[horoscopeName]
       console.log('got horoscopes info: ', horoscopeText)
-      callback(err, res.body, horoscopeText)
+      callback(err, res.body, horoscopeText, horoscopeName)
     })
 }
