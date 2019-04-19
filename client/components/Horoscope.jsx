@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Horoscope = () => {
   return (
@@ -11,7 +11,7 @@ const Horoscope = () => {
         <p>Lorem ipsum dolor...</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Horoscope;
+export default Horoscope
