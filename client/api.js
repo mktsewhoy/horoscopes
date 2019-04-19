@@ -2,12 +2,13 @@ import request from 'superagent'
 
 const horoscopeURL = 'https://www.horoscopes-and-astrology.com/json'
 
-export function getHoroscopeInfo(callback) {
+export function getHoroscopeInfo(callback, horoscopeName) {
   console.log('getting horoscope info')
   request
     .get(horoscopeURL)
     .end((err, res) => {
-      console.log('got horoscopes info: ', res.body)
-      callback(err, res.body)
+      let horoscopeText = res.body.dailyhoroscope[horoscopeName]
+      console.log('got horoscopes info: ', horoscopeText)
+      callback(err, res.body, horoscopeText)
     })
 }
