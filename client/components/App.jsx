@@ -37,7 +37,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>App is rendering!</h1>
-        <p>Horoscopes: {this.state.horoscopes.Aries}</p>
+        <p>Horoscopes: {this.state.horoscopes.Leo}</p>
       </div>
       // <div>
       // <h1>Pokemon</h1>

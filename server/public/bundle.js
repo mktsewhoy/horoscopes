@@ -186,7 +186,7 @@ function (_React$Component) {
     value: function render() {
       console.log('render');
       console.log(this.state.horoscopes);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "App is rendering!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Horoscopes: ", this.state.horoscopes.Aries)) // <div>
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "App is rendering!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Horoscopes: ", this.state.horoscopes.Leo)) // <div>
       // <h1>Pokemon</h1>
       // <h2>I have {this.state.pokemon.length} Pokemon!</h2>
       // {this.state.pokemon.map(p => {
