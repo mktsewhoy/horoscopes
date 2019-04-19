@@ -7,10 +7,13 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      horoscopes: []
+      horoscopes: [],
+      horoscopeText: ''
     }
 
     this.renderHoroscopeInfo = this.renderHoroscopeInfo.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+
   }
 
   componentWillMount() {
@@ -22,57 +25,62 @@ class App extends React.Component {
   componentDidMount() {
   }
 
-  renderHoroscopeInfo(err, horoscopes) {
-    console.log('rendering horoscope info')
+  renderHoroscopeInfo(err, horoscopes, horoscopeText) {
     this.setState({
       horoscopes: horoscopes.dailyhoroscope,
+      horoscopeText: horoscopeText
     })
   }
 
+  handleClick(e) {
+    let horoscopeName = e.target.id
+    getHoroscopeInfo(this.renderHoroscopeInfo, horoscopeName)
+  }
+
   render() {
-    console.log('render')
+    console.log('rendering')
     return (
       <div>
         <h1>App is rendering!</h1>
-        <p>Horoscopes: {this.state.horoscopes.Aries}</p>
+        <p>Horoscopes: {this.state.horoscopeText}</p>
         <div>
           <h1>Your Horoscope<br /><br /></h1>
           <ul className="circle">
             <li>
-              <div className="text" id="aries"><a href="#">&#9800;</a></div>
+              <div className="text" onClick={this.handleClick} id="Aries">&#9800;</div>
             </li>
             <li>
-              <div className="text" id="taurus"><a href="#">&#9801;</a></div>
+              <div className="text" onClick={this.handleClick} id="Taurus">&#9801;</div>
             </li>
             <li>
-              <div className="text" id="gemini"><a href="#">&#9802;</a></div>
+              <div className="text" onClick={this.handleClick} id="Gemini">&#9802;</div>
             </li>
             <li>
-              <div className="text" id="cancer"><a href="#">&#9803;</a></div>
+              <div className="text" onClick={this.handleClick} id="Cancer">&#9803;</div>
             </li>
             <li>
-              <div className="text" id="leo"><a href="#">&#9804;</a></div>
+              <div className="text" onClick={this.handleClick} id="Leo">&#9804;</div>
             </li>
             <li>
-              <div className="text" id="virgo"><a href="#">&#9805;</a></div>
+              <div className="text" onClick={this.handleClick} id="Virgo">&#9805;</div>
             </li>
             <li>
-              <div className="text" id="libra"><a href="#">&#9806;</a></div>
+              <div className="text" onClick={this.handleClick} id="Libra">&#9806;</div>
             </li>
             <li>
-              <div className="text" id="scorpio"><a href="#">&#9807;</a></div>
+              <div className="text" onClick={this.handleClick} id="Scorpio">&#9807;</div>
             </li>
             <li>
-              <div className="sagittarius"><a href="#">&#9808;</a></div>
+              <div className="text" onClick={this.handleClick} id="Sagittarius">&#9807;</div>
             </li>
             <li>
-              <div className="text" id="capricorn"><a href="#">&#9809;</a></div>
+              <div className="text" onClick={this.handleClick} id="Capricorn">&#9809;</div>
             </li>
             <li>
-              <div className="text" id="aquarius"><a href="#">&#9810;</a></div>
+              <div className="text" onClick={this.handleClick} id="Aquarius">&#9810;</div>
             </li>
             <li>
-              <div className="text" id="pisces"><a href="#">&#9811;</a></div>
+              <div className="text" onClick={this.handleClick} id="Pisces">&#9811;</div>
             </li>
           </ul>
           <div className="hole">
