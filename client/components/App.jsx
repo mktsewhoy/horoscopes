@@ -41,10 +41,9 @@ class App extends React.Component {
     console.log('rendering')
     return (
       <div>
-        <h1>App is rendering!</h1>
-        <p>Horoscopes: {this.state.horoscopeText}</p>
         <div>
           <h1>Your Horoscope<br /><br /></h1>
+          <h3>Horoscopes: {this.state.horoscopeText}</h3>
           <ul className="circle">
             <li>
               <div className="text" onClick={this.handleClick} id="Aries">&#9800;</div>
