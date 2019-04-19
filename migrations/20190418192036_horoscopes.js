@@ -5,10 +5,10 @@ exports.up = function(knex, Promise) {
     table.string("famous");
     table.string("month");
     table.string("famous Comedy");
-    table.integer("url");
+    table.string("url");
   });
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable("horoscopes", table);
+  return knex.schema.dropTable("horoscopes");
 };
