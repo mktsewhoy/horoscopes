@@ -3,12 +3,13 @@ const config = require('../../knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-    getHoroscopeInfo
- 
+  getHoroscopeDbInfo
 }
 
-function getHoroscopeInfo(db = connection) {
-  return db('horoscopes').select()
+function getHoroscopeDbInfo(horoscopeName, db = connection) {
+  return db('horoscopes')
+    .where('Sun sign', '=', horoscopeName)
+    .select()
 }
 
 
