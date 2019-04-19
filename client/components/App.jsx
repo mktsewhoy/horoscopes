@@ -26,9 +26,10 @@ class App extends React.Component {
   }
 
   renderHoroscopeInfo(err, horoscopes, horoscopeText) {
+    console.log("horoscope text: ", horoscopeText)
     this.setState({
       horoscopes: horoscopes.dailyhoroscope,
-      horoscopeText: horoscopeText
+      horoscopeText: horoscopeText.split('<')[0]
     })
   }
 
@@ -43,7 +44,7 @@ class App extends React.Component {
       <div>
         <div>
           <h1>Your Horoscope<br /><br /></h1>
-          <h3>Horoscopes: {this.state.horoscopeText}</h3>
+          <h3>{this.state.horoscopeText}</h3>
           <ul className="circle">
             <li>
               <div className="text" onClick={this.handleClick} id="Aries">&#9800;</div>
